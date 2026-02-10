@@ -1,0 +1,685 @@
+body{
+    background-image: url('/static/images/Background.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer{
+    width: 100%;
+    background: #02215d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    margin-top: 150px;
+    flex-direction: column;
+    text-align: center;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.Texto {
+    font-size: 18px;
+    color: white;
+    margin: 0;
+    display: block;
+}
+
+.SubTexto {
+    display: block;
+    font-size: 14px;
+    color: #004a8d;
+    font-weight: 400;
+    margin: 0;
+}
+
+.Conteudo{
+    width: 100%;
+    position: relative;
+    flex: 1;
+}
+
+.NavBar{
+    color: aliceblue;
+    padding: 0;
+    margin: 0;
+    margin-left: 5.5%;
+}
+
+.NavBar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    font-weight: bold;
+}
+
+.NavBar li{
+    padding: 20px 20px;
+    cursor: pointer;
+}
+
+.NavBar a{
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+.NavBar a:hover{
+    text-decoration: none;
+    color: #1aa5ea;
+}
+
+.Inicio{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.Inicio h1{
+    text-align: center;
+    padding-top: 10%;
+    color: #02215d;
+}
+
+.Logo{
+    width: 450px;
+    padding-left: 5%;
+    padding-top: 5%;
+}
+
+.CardImage{
+    width: 300px;
+    padding-left: 10%;
+}
+
+.SobreNos h1{
+    color: #02215d;
+    display: flex;
+    justify-content: center;
+    padding-top: 50%;
+}
+
+.ContainerSobreNos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 100px;
+    width: 100%;
+    max-width: 0;
+    margin: 0 auto;
+    padding-top: 20%;
+}
+
+.Contem1, .Contem2{
+    display: flex;
+    justify-content: flex-end;
+    flex: 1; 
+}
+
+.Contem1 p{
+    background-color: #004a8d;
+    border-radius: 50px 20px;
+    padding: 42px;
+    color: white;
+    width: 400px;
+    height: 200px;
+}
+
+.Contem2 p{
+    background-color: #004a8d;
+    border-radius: 20px 50px;
+    padding: 60px;
+    color: white;
+    width: 400px;
+    height: auto;
+}
+
+.ContainerServicos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 15%;
+}
+
+.Servicos h1{
+    color: #02215d;
+    display: flex;
+    justify-content: center;
+    padding-top: 20%;
+}
+
+.Fotos1 ul{
+    list-style-type: none;
+}
+.Fotos1 img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5%;
+    margin-right: 12px;
+    margin-top: 12px;
+}
+
+.Contem3 p{
+    background-color: #004a8d;
+    border-radius: 20px;
+    padding: 60px;
+    color: white;
+}
+
+.Contatos h1{
+    color: #02215d;
+    display: flex;
+    justify-content: center;
+    padding-top: 20%;
+}
+
+.ContainerPai{
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+
+.Ctt1 {
+    text-align: center;
+    color: white;
+    width: 250px;
+    height: auto;
+    z-index: 10;
+    background-color: #004a8d;
+    border-radius: 20px;
+    padding: 100px 0px;
+}
+
+.PhoneIcon{
+    width: 50px;
+    filter: brightness(0) invert(1);
+}
+
+.Ctt2{
+    text-align: center;
+    color: white;
+    width: 250px;
+    height: fit-content;
+    z-index: 10;
+    background-color: #004a8d;
+    border-radius: 50px 20px;
+    padding: 90px 0px;
+}
+
+.EmailIcon{
+    width: 50px;
+    filter: brightness(0) invert(1);
+}
+
+.Ctt3{
+    text-align: center;
+    color: white;
+    width: 200px;
+    height: fit-content;
+    z-index: 10;
+    background-color: #004a8d;
+    border-radius: 20px 50px;
+    padding: 60px 20px;
+}
+
+.LocationIcon{
+    width: 50px;
+    filter: brightness(0) invert(1);
+}
+
+.BtnInicio{
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BtnWpp img{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.InvInicio{
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.InvSobreNos{
+    display: flex;
+    justify-content: center;
+    margin-top: -10%;
+}
+
+.InvServicos{
+    display: flex;
+    justify-content: center;
+    margin-top: -10%;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 12px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #006edb; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #004a8d;
+}
+
+@media (max-width:600px){
+
+    body{
+        background-image: url('/static/images/BackgroundCelular.png');
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        background-color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .Logo{
+        width: 200px;
+    }
+    .NavBar{
+        font-size: 15px;
+    }
+    .NavBar ul{
+        display: block;
+    }
+    .NavBar li{
+        padding: 5px 0;
+    }
+    .SobreNos h1{
+        padding-top: 150%;
+        font-size: 30px;
+    }
+    .ContainerSobreNos{
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        gap: 10px;
+    }
+    .Contem1, .Contem2 {
+        justify-content: center; 
+        width: 90%;
+        max-width: 400px; 
+    }
+    .Contem1 p, .Contem2 p {
+        width: 100%; 
+        padding: 30px; 
+        height: auto;
+        box-sizing: border-box; 
+    }
+    .ContainerServicos{
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        gap: 10px;
+    }
+    .Contem3{
+        justify-content: center;
+        width: 90%;
+        max-width: 400px;
+    }
+    .Fotos1 img{
+        width: 90%;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 5%;
+        margin-top: 8px;
+    }
+
+    .ContainerPai{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .InvInicio{
+        display: flex;
+        justify-content: center;
+        margin-top: auto;
+    }
+
+    .InvSobreNos{
+        display: flex;
+        justify-content: center;
+        margin-top: -20%;
+    }
+
+    .InvServicos{
+        display: flex;
+        justify-content: center;
+        margin-top: -20%;
+    }
+
+}
+
+@media (max-width: 932px) and (orientation: landscape) {
+    body{
+        background-image: url('/static/images/BackgroundCelular.png');
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        background-color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .Logo{
+        width: 300px;
+    }
+    .NavBar{
+        font-size: 15px;
+    }
+    .NavBar ul{
+        display: block;
+    }
+    .NavBar li{
+        padding: 5px 0;
+    }
+    .SobreNos h1{
+        padding-top: 150%;
+        font-size: 30px;
+    }
+    .ContainerSobreNos{
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        gap: 10px;
+    }
+    .Contem1, .Contem2 {
+        justify-content: center; 
+        width: 90%;
+        max-width: 400px; 
+    }
+    .Contem1 p, .Contem2 p {
+        width: 100%; 
+        padding: 30px; 
+        height: auto;
+        box-sizing: border-box; 
+    }
+    .ContainerServicos{
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        gap: 10px;
+    }
+    .Contem3{
+        justify-content: center;
+        width: 90%;
+        max-width: 400px;
+    }
+    .Fotos1 img{
+        width: 90%;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 5%;
+        margin-top: 8px;
+    }
+
+    .ContainerPai{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .InvInicio{
+        display: flex;
+        justify-content: center;
+        margin-top: auto;
+    }
+
+    .InvSobreNos{
+        display: flex;
+        justify-content: center;
+        margin-top: -20%;
+    }
+
+    .InvServicos{
+        display: flex;
+        justify-content: center;
+        margin-top: -20%;
+    }
+  
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    body{
+        background-image: url('/static/images/BackgroundCelular.png');
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        background-color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .Logo{
+        width: 300px;
+    }
+    .NavBar{
+        font-size: 20px;
+    }
+    .NavBar ul{
+        display: block;
+    }
+    .NavBar li{
+        padding: 5px 0;
+    }
+    .SobreNos h1{
+        padding-top: 150%;
+        font-size: 30px;
+    }
+    .ContainerSobreNos{
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        gap: 10px;
+    }
+    .Contem1, .Contem2 {
+        justify-content: center; 
+        width: 100%;
+        max-width: 400px; 
+    }
+    .Contem1 p, .Contem2 p {
+        width: 100%; 
+        padding: 30px; 
+        height: auto;
+        box-sizing: border-box; 
+    }
+    .ContainerServicos{
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        gap: 10px;
+    }
+    .Contem3{
+        justify-content: center;
+        width: 90%;
+        max-width: 400px;
+    }
+    .Fotos1 img{
+        width: 90%;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 5%;
+        margin-top: 8px;
+    }
+
+    .ContainerPai{
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .InvInicio{
+        display: flex;
+        justify-content: center;
+        margin-top: auto;
+    }
+
+    .InvSobreNos{
+        display: flex;
+        justify-content: center;
+        margin-top: -20%;
+    }
+
+    .InvServicos{
+        display: flex;
+        justify-content: center;
+        margin-top: -20%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+  body{
+        background-image: url('/static/images/BackgroundCelular.png');
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        background-color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .Logo{
+        width: 300px;
+    }
+    .NavBar{
+        font-size: 20px;
+    }
+    .NavBar ul{
+        display: block;
+    }
+    .NavBar li{
+        padding: 5px 0;
+    }
+    .SobreNos h1{
+        padding-top: 60%;
+        font-size: 30px;
+    }
+    .ContainerSobreNos{
+        align-items: center;
+        max-width: 100%;
+        gap: 10px;
+    }
+    .Contem1, .Contem2 {
+        justify-content: center; 
+        width: 90%;
+        max-width: 400px; 
+    }
+    .Contem1 p, .Contem2 p {
+        width: 100%; 
+        padding: 30px; 
+        height: auto;
+        box-sizing: border-box; 
+    }
+    .ContainerServicos{
+        align-items: center;
+        max-width: 100%;
+        gap: 10px;
+    }
+    .Contem3{
+        justify-content: center;
+        width: 90%;
+        max-width: 400px;
+    }
+    .Fotos1 img{
+        width: 90%;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 5%;
+        margin-top: 8px;
+    }
+
+    .ContainerPai{
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .InvInicio{
+        display: flex;
+        justify-content: center;
+        margin-top: auto;
+    }
+
+    .InvSobreNos{
+        display: flex;
+        justify-content: center;
+        margin-top: -20%;
+    }
+
+    .InvServicos{
+        display: flex;
+        justify-content: center;
+        margin-top: -20%;
+    }
+}

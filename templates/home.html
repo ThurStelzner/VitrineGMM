@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>GMM Refrigeração</title>
+</head>
+<body>
+    <div><a href="#Inicio" class="BtnInicio">▲</a></div>
+    <div id="Inicio" class="InvInicio">⠀</div>
+    <img src="{{url_for('static', filename='images/logo.png')}}" class="Logo">
+    <nav class="NavBar">
+        <ul>
+            <li><a href="#SobreNos">SobreNos</a></li>
+            <li><a href="#Servicos">Nossos Serviços</a></li>
+            <li><a href="#Contatos">Contatos</a></li>
+        </ul>
+    </nav> 
+    <div class="Conteudo">
+        <div class="SobreNos">
+            <h1>SobreNos</h1>
+            <div id="SobreNos" class="InvSobreNos">⠀</div>
+            <div class="ContainerSobreNos">
+                <div class="Contem1">
+                    <p> Somos especialistas
+                        em assistência técnica de eletrodomésticos linha branca,
+                        oferecendo serviços com qualidade, agilidade e preço justo.
+                        Trabalhamos apenas com peças originais,
+                        garantindo mais durabilidade e segurança para o seu produto.
+                        <br><br> GMM, cada atendimento é realizado com profissionalismo
+                        e transparência, sempre buscando a satisfação total do cliente. Conte com nossa equipe para cuidar dos seus eletrodomésticos com a excelência e confiança que você merece.</p>
+                </div>
+                <div class="Contem2">
+                    <p>Nossos serviços de conserto são realizados diretamente na residência do cliente, com toda praticidade e agilidade.
+                        Não é necessário retirar o produto — nós cuidamos de tudo no conforto da sua casa!<br><br>
+                        Seu eletrodoméstico novo de novo, qualidade, agilidade e confiança em cada reparo.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="Servicos">
+            <h1>Nossos Serviços</h1>
+            <div id="Servicos" class="InvServicos">⠀</div>
+            <div class="ContainerServicos">
+                <div class="Contem3">
+                    <p>
+                        Serviço de confiança e qualidade? é com a GMM!<br><br>
+                        ▸ Atendimento à domicilio<br>
+                        ▸ Profissionais experientes<br>
+                        ▸ Preços justos<br>
+                        ▸ Garantia.<br><br>
+                        Trabalhamos com toda a linha branca de eletrodomésticos.
+                    </p>
+                </div>
+                <div class="Fotos1">
+                    <ul>
+                        <li>
+                            <img src="{{url_for('static', filename='images/1.jpeg')}}" alt="foto1">
+                            <img src="{{url_for('static', filename='images/2.jpeg')}}" alt="foto2"><br>
+                            <img src="{{url_for('static', filename='images/3.jpeg')}}" alt="foto3">
+                            <img src="{{url_for('static', filename='images/4.jpeg')}}" alt="foto4">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="Contatos">
+            <h1>Entre em Contato</h1>
+            <div id="Contatos" class="InvContatos">⠀</div>
+            <div class="ContainerPai">
+                <div class="Ctt2">
+                    <h2>E-mail</h2>
+                    <p>gmmrefrigeracaosc@gmail.com</p>
+                    <img class="EmailIcon" src="{{url_for('static', filename='images/EmailIcon.png')}}" alt="Email">
+                </div>
+                <div class="Ctt1">
+                    <h2>Telefone</h2>
+                    <p>Segunda - Sábado</p>
+                    <p>(47) 8818-2676</p>
+                    <img class="PhoneIcon" src="{{url_for('static', filename='images/PhoneIcon.png')}}" alt="Phone">
+                </div>
+                <div class="Ctt3">
+                    <h2>Localização</h2>
+                    <p>Joinville – Santa Catarina</p>
+                    <img class="EmailIcon" src="{{url_for('static', filename='images/LocationIcon.png')}}" alt="Location">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div><a href="https://wa.me/47988182676" class="BtnWpp"><img src="{{url_for('static', filename='images/WhatsIcon.png')}}" alt="Whatsapp"></a></div>
+    <footer>
+        <p class="Texto">Todo serviço possui garantia</p>
+        <p class="SubTexto">Desenvolvido por Arthur Iantas Stelzner, Design por Guilherme Miranda de Melo Costa</p>
+    </footer>
+</body>
+</html>
