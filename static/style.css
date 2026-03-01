@@ -169,8 +169,36 @@ html{
     object-fit: cover;
     object-position: center;
     border-radius: 5%;
-    margin-right: 12px;
-    margin-top: 12px;
+    margin: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.Fotos1 img:nth-child(1) {
+    transform-origin: bottom right;
+}
+
+.Fotos1 img:nth-child(2) {
+    transform-origin: bottom left;
+}
+
+.Fotos1 img:nth-child(4) {
+    transform-origin: top right;
+}
+
+.Fotos1 img:nth-child(5) { 
+    transform-origin: top left;
+}
+
+.Fotos1 img:hover {
+    transform: scale(1.3);
+    z-index: 10;
+    position: relative;
+}
+
+.Fotos1 img:hover{
+    width: 220px;
+    height: 220px;
 }
 
 .Contem3 p{
@@ -182,13 +210,6 @@ html{
     height: 300px;
     margin-right: 150px;
     font-size: 20px;
-}
-
-.Contatos h1{
-    color: #02215d;
-    display: flex;
-    justify-content: center;
-    padding-top: 20%;
 }
 
 .ContainerPai{
@@ -338,50 +359,87 @@ html{
         min-height: 100vh;
     }
 
+    * {
+        box-sizing: border-box;
+        max-width: 100%; 
+    }
+
     .Logo{
         width: 200px;
     }
     .NavBar{
-        font-size: 15px;
+        font-size: 10px;
     }
     .NavBar ul{
-        display: block;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        width: 50%;
+        margin-left: 3%;
     }
     .NavBar li{
-        padding: 5px 0;
+        padding: 3px 0;
     }
-    .SobreNos h1{
-        padding-top: 150%;
-        font-size: 30px;
-    }
-    .ContainerSobreNos{
+    .ContainerSobreNos {
+        display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 100%;
-        gap: 10px;
+        max-width: 90%;
+        align-self: center; 
     }
+
     .Contem1, .Contem2 {
-        justify-content: center; 
-        width: 90%;
+        width: 100%;
         max-width: 400px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
     }
-    .Contem1 p, .Contem2 p {
-        width: 100%; 
+
+    .Contem2 {
+        min-height: auto; 
+    }
+
+    .Contem1 p, .Contem2 ul {
+        width: 90%; 
+        box-sizing: border-box; 
+        margin: 0;
+    }
+
+    .Contem1 p {
         padding: 30px; 
         height: auto;
-        box-sizing: border-box; 
     }
+
+    .Contem2 ul {
+        flex-direction: column;
+        gap: 40px; 
+        padding: 20px;         
+        border-radius: 20px;
+    }
+
     .ContainerServicos{
+        display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 100%;
-        gap: 10px;
+        max-width: 90%;
+        align-self: center; 
     }
     .Contem3{
-        justify-content: center;
-        width: 90%;
-        max-width: 400px;
+        width: 100%;
+        max-width: 400px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
     }
+
+    .Contem3 p {
+        width: 90%; 
+        box-sizing: border-box; 
+        margin: 0;
+        height: auto;
+    }
+
     .Fotos1 img{
         width: 90%;
         height: 300px;
@@ -407,15 +465,14 @@ html{
     .InvSobreNos{
         display: flex;
         justify-content: center;
-        margin-top: -20%;
+        margin-top: 200%;
     }
 
     .InvServicos{
         display: flex;
         justify-content: center;
-        margin-top: -20%;
+        margin-top: 60%;
     }
-
 }
 
 @media (max-width: 932px) and (orientation: landscape) {
@@ -432,6 +489,11 @@ html{
         min-height: 100vh;
     }
 
+    * {
+        box-sizing: border-box;
+        max-width: 100%; 
+    }
+
     .Logo{
         width: 300px;
     }
@@ -439,43 +501,74 @@ html{
         font-size: 15px;
     }
     .NavBar ul{
-        display: block;
+        display: grid;
+        gap: 5px;
+        width: 50%;
+        margin-left: 3%;
     }
     .NavBar li{
-        padding: 5px 0;
+        padding: 3px 0;
     }
-    .SobreNos h1{
-        padding-top: 150%;
-        font-size: 30px;
-    }
-    .ContainerSobreNos{
+    .ContainerSobreNos {
+        display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 100%;
-        gap: 10px;
+        max-width: 90%;
+        align-self: center; 
     }
+
     .Contem1, .Contem2 {
-        justify-content: center; 
-        width: 90%;
+        width: 100%;
         max-width: 400px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
     }
-    .Contem1 p, .Contem2 p {
-        width: 100%; 
+
+    .Contem2 {
+        min-height: auto; 
+    }
+
+    .Contem1 p, .Contem2 ul {
+        width: 90%; 
+        box-sizing: border-box; 
+        margin: 0;
+    }
+
+    .Contem1 p {
         padding: 30px; 
         height: auto;
-        box-sizing: border-box; 
     }
+
+    .Contem2 ul {
+        flex-direction: column;
+        gap: 40px; 
+        padding: 20px;         
+        border-radius: 20px;
+    }
+
     .ContainerServicos{
+        display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 100%;
-        gap: 10px;
+        max-width: 90%;
+        align-self: center; 
     }
     .Contem3{
-        justify-content: center;
-        width: 90%;
-        max-width: 400px;
+        width: 100%;
+        max-width: 400px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
     }
+
+    .Contem3 p {
+        width: 90%; 
+        box-sizing: border-box; 
+        margin: 0;
+        height: auto;
+    }
+
     .Fotos1 img{
         width: 90%;
         height: 300px;
@@ -486,7 +579,7 @@ html{
     }
 
     .ContainerPai{
-        flex-direction: column;
+        flex-direction: block;
         align-items: center;
         justify-content: center;
         gap: 50px;
@@ -501,15 +594,14 @@ html{
     .InvSobreNos{
         display: flex;
         justify-content: center;
-        margin-top: -20%;
+        margin-top: 100%;
     }
 
     .InvServicos{
         display: flex;
         justify-content: center;
-        margin-top: -20%;
+        margin-top: 30%;
     }
-  
 }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
@@ -526,6 +618,11 @@ html{
         min-height: 100vh;
     }
 
+    * {
+        box-sizing: border-box;
+        max-width: 100%; 
+    }
+
     .Logo{
         width: 300px;
     }
@@ -533,40 +630,74 @@ html{
         font-size: 20px;
     }
     .NavBar ul{
-        display: block;
+        display: grid;
+        gap: 5px;
+        width: 50%;
+        margin-left: 3%;
     }
     .NavBar li{
-        padding: 5px 0;
+        padding: 3px 0;
     }
-    
-    .ContainerSobreNos{
+    .ContainerSobreNos {
+        display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 100%;
-        gap: 10px;
+        max-width: 90%;
+        align-self: center; 
     }
+
     .Contem1, .Contem2 {
-        justify-content: center; 
         width: 100%;
         max-width: 400px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
     }
-    .Contem1 p, .Contem2 p {
-        width: 100%; 
+
+    .Contem2 {
+        min-height: auto; 
+    }
+
+    .Contem1 p, .Contem2 ul {
+        width: 90%; 
+        box-sizing: border-box; 
+        margin: 0;
+    }
+
+    .Contem1 p {
         padding: 30px; 
         height: auto;
-        box-sizing: border-box; 
     }
+
+    .Contem2 ul {
+        flex-direction: column;
+        gap: 40px; 
+        padding: 60px;         
+        border-radius: 20px;
+    }
+
     .ContainerServicos{
+        display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 100%;
-        gap: 10px;
+        max-width: 90%;
+        align-self: center; 
     }
     .Contem3{
-        justify-content: center;
-        width: 90%;
-        max-width: 400px;
+        width: 100%;
+        max-width: 400px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
     }
+
+    .Contem3 p {
+        width: 90%; 
+        box-sizing: border-box; 
+        margin: 0;
+        height: auto;
+    }
+
     .Fotos1 img{
         width: 90%;
         height: 300px;
@@ -577,9 +708,10 @@ html{
     }
 
     .ContainerPai{
+        flex-direction: block;
         align-items: center;
         justify-content: center;
-        gap: 5px;
+        gap: 20px;
     }
 
     .InvInicio{
@@ -591,18 +723,18 @@ html{
     .InvSobreNos{
         display: flex;
         justify-content: center;
-        margin-top: -20%;
+        margin-top: 100%;
     }
 
     .InvServicos{
         display: flex;
         justify-content: center;
-        margin-top: -20%;
+        margin-top: 50%;
     }
 }
 
 @media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
-  body{
+    body{
         background-image: url('/static/images/BackgroundCelular.jpg');
         background-repeat: no-repeat;
         background-position: top;
@@ -615,6 +747,11 @@ html{
         min-height: 100vh;
     }
 
+    * {
+        box-sizing: border-box;
+        max-width: 100%; 
+    }
+
     .Logo{
         width: 300px;
     }
@@ -622,41 +759,74 @@ html{
         font-size: 20px;
     }
     .NavBar ul{
-        display: block;
+        display: grid;
+        gap: 5px;
+        width: 50%;
+        margin-left: 3%;
     }
     .NavBar li{
-        padding: 5px 0;
+        padding: 3px 0;
     }
-    .SobreNos h1{
-        padding-top: 60%;
-        font-size: 30px;
-    }
-    .ContainerSobreNos{
+    .ContainerSobreNos {
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        max-width: 100%;
-        gap: 10px;
+        max-width: 90%;
+        align-self: center; 
     }
+
     .Contem1, .Contem2 {
-        justify-content: center; 
-        width: 90%;
+        width: 100%;
         max-width: 400px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
     }
-    .Contem1 p, .Contem2 p {
-        width: 100%; 
+
+    .Contem2 {
+        min-height: auto; 
+    }
+
+    .Contem1 p, .Contem2 ul {
+        width: 90%; 
+        box-sizing: border-box; 
+        margin: 0;
+    }
+
+    .Contem1 p {
         padding: 30px; 
         height: auto;
-        box-sizing: border-box; 
     }
+
+    .Contem2 ul {
+        flex-direction: column;
+        gap: 40px; 
+        padding: 60px;         
+        border-radius: 20px;
+    }
+
     .ContainerServicos{
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        max-width: 100%;
-        gap: 10px;
+        max-width: 90%;
+        align-self: center; 
     }
     .Contem3{
-        justify-content: center;
-        width: 90%;
-        max-width: 400px;
+        width: 100%;
+        max-width: 400px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
     }
+
+    .Contem3 p {
+        width: 90%; 
+        box-sizing: border-box; 
+        margin: 0;
+        height: auto;
+    }
+
     .Fotos1 img{
         width: 90%;
         height: 300px;
@@ -667,9 +837,10 @@ html{
     }
 
     .ContainerPai{
+        flex-direction: block;
         align-items: center;
         justify-content: center;
-        gap: 5px;
+        gap: 20px;
     }
 
     .InvInicio{
@@ -681,12 +852,12 @@ html{
     .InvSobreNos{
         display: flex;
         justify-content: center;
-        margin-top: -20%;
+        margin-top: 100%;
     }
 
     .InvServicos{
         display: flex;
         justify-content: center;
-        margin-top: -20%;
+        margin-top: 50%;
     }
 }
