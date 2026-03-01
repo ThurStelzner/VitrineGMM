@@ -118,8 +118,12 @@ html{
     flex: 1; 
 }
 
-.Contem2{
-    padding-top: 5%;
+.Contem2 {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; 
+    padding-top: 80px; 
 }
 
 .Contem1 p{
@@ -130,18 +134,72 @@ html{
     font-size: 25px;
 }
 
-.Contem2 ul{
-    list-style: none;
+.Contem2 p{
+    font-size: 20px;
     background-color: #004a8d;
-    border-radius: 20px 50px;
     display: flex;
-    flex-direction: row;
-    gap: 100px;
     justify-content: center;
     padding: 60px;
     color: white;
-    width: 50%;
     height: auto;
+    font-weight: bold;
+    margin: 30px;
+}
+
+.Contem2 img {
+    width: 500px;
+}
+
+.Item1 {
+    border-radius: 20px 50px;
+}
+
+.Item2 {
+    border-radius: 20px;
+}
+
+.Item3 {
+    border-radius: 50px 20px;
+}
+
+.TextosBeneficios {
+    display: flex;
+    flex-direction: row; 
+    gap: 20px;      
+    justify-content: center;
+    flex-wrap: wrap;     
+}
+
+.CardBeneficio {
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+}
+.CardBeneficio img {
+    width: 150px; 
+    height: auto;
+    position: absolute;
+    top: -80px;
+    z-index: 2;
+}
+
+.CardBeneficio p {
+    background-color: #004a8d;
+    color: white;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: flex-end; 
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    box-sizing: border-box;
+    z-index: 1;
 }
 
 .ContainerServicos {
@@ -151,13 +209,6 @@ html{
     width: 100%;
     margin: 0 auto;
     padding-top: 10%;
-}
-
-.Servicos h1{
-    color: #02215d;
-    display: flex;
-    justify-content: center;
-    padding-top: 20%;
 }
 
 .Fotos1 ul{
@@ -190,26 +241,20 @@ html{
     transform-origin: top left;
 }
 
-.Fotos1 img:hover {
-    transform: scale(1.3);
-    z-index: 10;
-    position: relative;
-}
-
-.Fotos1 img:hover{
-    width: 220px;
-    height: 220px;
-}
-
 .Contem3 p{
     background-color: #004a8d;
     border-radius: 20px;
-    padding: 60px;
     color: white;
-    width: 300px;
-    height: 300px;
-    margin-right: 150px;
+    width: 400px;
+    height: 400px;
     font-size: 20px;
+    display: flex;           
+    justify-content: center;  
+    align-items: center;    
+    box-sizing: border-box;  
+    text-align: center;
+    padding: 30px;
+    margin: 40px;
 }
 
 .ContainerPai{
@@ -228,6 +273,8 @@ html{
     background-color: #004a8d;
     border-radius: 20px;
     padding: 100px 0px;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
 .PhoneIcon{
@@ -244,6 +291,8 @@ html{
     background-color: #004a8d;
     border-radius: 50px 20px;
     padding: 90px 0px;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
 .EmailIcon{
@@ -260,6 +309,8 @@ html{
     background-color: #004a8d;
     border-radius: 20px 50px;
     padding: 60px 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
 .LocationIcon{
@@ -344,6 +395,37 @@ html{
     background: #004a8d;
 }
 
+.neve {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.floco {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url("/static/images/FlocoIcon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    animation: cair linear infinite;
+}
+
+@keyframes cair {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(110vh) rotate(90deg);
+    }
+}
+
 @media (max-width:600px){
 
     body{
@@ -400,7 +482,7 @@ html{
         min-height: auto; 
     }
 
-    .Contem1 p, .Contem2 ul {
+    .Contem1 p, .Contem2 p {
         width: 90%; 
         box-sizing: border-box; 
         margin: 0;
@@ -411,22 +493,31 @@ html{
         height: auto;
     }
 
-    .Contem2 ul {
+    .Contem2 p {
         flex-direction: column;
         gap: 40px; 
         padding: 20px;         
         border-radius: 20px;
     }
 
+    .CardBeneficio {
+        margin-top: 40px;
+    }
+
+    .CardBeneficio img {
+        top: -90px;
+    }
+
     .ContainerServicos{
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-        max-width: 90%;
+        max-width: 100%;
         align-self: center; 
     }
     .Contem3{
-        width: 100%;
+        width: 90%;
         max-width: 400px; 
         display: flex;
         flex-direction: column;
@@ -434,19 +525,32 @@ html{
     }
 
     .Contem3 p {
-        width: 90%; 
         box-sizing: border-box; 
-        margin: 0;
         height: auto;
     }
 
+    .Fotos1 {
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Fotos1 ul {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+
     .Fotos1 img{
         width: 90%;
-        height: 300px;
+        height: auto;
         object-fit: cover;
-        object-position: center;
         border-radius: 5%;
         margin-top: 8px;
+        cursor: none;
     }
 
     .ContainerPai{
@@ -473,6 +577,8 @@ html{
         justify-content: center;
         margin-top: 60%;
     }
+
+    
 }
 
 @media (max-width: 932px) and (orientation: landscape) {
@@ -547,6 +653,14 @@ html{
         border-radius: 20px;
     }
 
+    .CardBeneficio {
+        margin-top: 40px;
+    }
+
+    .CardBeneficio img {
+        top: -90px;
+    }
+
     .ContainerServicos{
         display: flex;
         flex-direction: column;
@@ -576,6 +690,7 @@ html{
         object-position: center;
         border-radius: 5%;
         margin-top: 8px;
+        cursor: none;
     }
 
     .ContainerPai{
@@ -676,6 +791,14 @@ html{
         border-radius: 20px;
     }
 
+    .CardBeneficio {
+        margin-top: 40px;
+    }
+
+    .CardBeneficio img {
+        top: -90px;
+    }
+
     .ContainerServicos{
         display: flex;
         flex-direction: column;
@@ -705,6 +828,7 @@ html{
         object-position: center;
         border-radius: 5%;
         margin-top: 8px;
+        cursor: none;
     }
 
     .ContainerPai{
@@ -805,6 +929,14 @@ html{
         border-radius: 20px;
     }
 
+    .CardBeneficio {
+        margin-top: 40px;
+    }
+
+    .CardBeneficio img {
+        top: -90px;
+    }
+
     .ContainerServicos{
         display: flex;
         flex-direction: column;
@@ -834,6 +966,7 @@ html{
         object-position: center;
         border-radius: 5%;
         margin-top: 8px;
+        cursor: none;
     }
 
     .ContainerPai{
@@ -859,5 +992,24 @@ html{
         display: flex;
         justify-content: center;
         margin-top: 50%;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .Fotos1 img:hover {
+        transform: scale(1.3);
+        z-index: 10;
+        position: relative;
+        width: 220px;
+        height: 220px;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .Ctt1:hover, .Ctt2:hover, .Ctt3:hover {
+        transform: scale(1.3);
+        z-index: 10;
+        position: relative;
+        width: 300px;
     }
 }

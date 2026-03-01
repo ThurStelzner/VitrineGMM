@@ -7,6 +7,7 @@
     <title>GMM Refrigeração</title>
 </head>
 <body>
+    <div class="neve"></div>
     <div><a href="#Inicio" class="BtnInicio">▲</a></div>
     <div id="Inicio" class="InvInicio">⠀</div>
     <img src="{{url_for('static', filename='images/logo.png')}}" class="Logo">
@@ -26,12 +27,20 @@
                     <p>Serviço de confiança e qualidade? é com a GMM!</p>
                 </div>
                 <div class="Contem2">
-                    <ul>
-                        <li>Profissionais esperientes</li>
-                        <li>Trabalhamos com toda linha branca de eletrodomésticos</li>
-                        <li>Atendimento à domicilio</li>
-                        <li>Serviços com garantia</li>
-                    </ul>
+                    <div class="CardBeneficio">
+                        <img src="{{url_for('static', filename='images/TrabalhadorIcon.png')}}" alt="Profissionais">
+                        <p class="Item1">Profissionais experientes</p>
+                    </div>
+
+                    <div class="CardBeneficio">
+                        <img src="{{url_for('static', filename='images/CasaIcon.png')}}" alt="Atendimento">
+                        <p class="Item2">Atendimento à domicílio</p>
+                    </div>
+
+                    <div class="CardBeneficio">
+                        <img src="{{url_for('static', filename='images/GarantiaIcon.png')}}" alt="Garantia">
+                        <p class="Item3">Serviços com garantia</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -41,7 +50,7 @@
             <div class="ContainerServicos">
                 <div class="Contem3">
                     <p>
-                        Em Joinville e região, a GMM Refrigeração se destaca pela qualidade, confiança e compromisso com cada cliente. Trabalhamos com responsabilidade, atendimento ágil e serviços feitos com excelência, garantindo soluções eficientes e duradouras.
+                        Em Joinville e região, a GMM Refrigeração é referência em serviços para toda a linha branca de eletrodomésticos. Atuando com responsabilidade, atendimento ágil e excelência na execução dos serviços, a empresa garante soluções eficientes e duradouras, sempre prezando pela confiança e pelo compromisso com cada cliente.
                     </p>
                 </div>
                 <div class="Fotos1">
@@ -66,10 +75,10 @@
                     <img class="EmailIcon" src="{{url_for('static', filename='images/EmailIcon.png')}}" alt="Email">
                 </div>
                 <div class="Ctt1">
-                    <h2>Telefone</h2>
-                    <p>Segunda - Sábado</p>
-                    <p>(47) 8818-2676</p>
-                    <img class="PhoneIcon" src="{{url_for('static', filename='images/PhoneIcon.png')}}" alt="Phone">
+                        <h2>Telefone</h2>
+                        <p>Segunda - Sábado</p>
+                        <p>(47) 8818-2676</p>
+                        <img class="PhoneIcon" src="{{url_for('static', filename='images/PhoneIcon.png')}}" alt="Phone">
                 </div>
                 <div class="Ctt3">
                     <h2>Localização</h2>
@@ -85,5 +94,19 @@
         <p class="Texto">Todo serviço possui garantia</p>
         <p class="SubTexto">Desenvolvido por Arthur Iantas Stelzner, Design por Guilherme Miranda de Melo Costa</p>
     </footer>
+<script>
+    const neve = document.querySelector(".neve");
+
+    for (let i = 0; i < 30; i++) {
+        let floco = document.createElement("div");
+        floco.classList.add("floco");
+
+        floco.style.left = Math.random() * 100 + "vw";
+        floco.style.animationDuration = (5 + Math.random() * 10) + "s";
+        floco.style.opacity = Math.random();
+
+        neve.appendChild(floco);
+    }
+</script>
 </body>
 </html>
