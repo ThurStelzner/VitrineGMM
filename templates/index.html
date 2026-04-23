@@ -1,116 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
     <link rel="shortcut icon" href="{{url_for('static', filename='images/FlocoIcon.png')}}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <title>GMM Refrigeração</title>
 </head>
 <body>
-    <div class="neve"></div>
-    <div><a href="#Inicio" class="BtnInicio">▲</a></div>
-    <div id="Inicio" class="InvInicio">⠀</div>
-    <img src="{{url_for('static', filename='images/logo.png')}}" class="Logo">
-    <nav class="NavBar">
-        <ul>
-            <li><a href="#SobreNos">SobreNos</a></li>
-            <li><a href="#Servicos">Nossos Serviços</a></li>
-            <li><a href="#Contatos">Contatos</a></li>
-            <li><a href="https://www.google.com/search?q=gmm+refrigera%C3%A7%C3%A3o&rlz=1C1VDKB_enBR1145BR1145&oq=&gs_lcrp=EgZjaHJvbWUqBggBEEUYOzIHCAAQABiPAjIGCAEQRRg7Mg8IAhAuGAoYxwEY0QMYgAQyBggDECMYJzIMCAQQABgUGIcCGIAEMgYIBRBFGDwyBggGEEUYPTIGCAcQRRg80gEIMTM3OWowajSoAgCwAgE&sourceid=chrome&ie=UTF-8#lrd=0x94deb1f0e01fad9b:0x1e084191ed37dc60,1">Feedbacks</a></li>
-        </ul>
-    </nav> 
-    <div class="Conteudo">
-        <div class="SobreNos">
-            <div id="SobreNos" class="InvSobreNos">⠀</div>
-            <div class="ContainerSobreNos">
-                <h1>Sobre Nós</h1>
-                <div class="Contem1">
-                    <p>Serviço de confiança e qualidade? é com a GMM!</p>
-                </div>
-                <div class="Contem2">
-                    <div class="CardBeneficio">
-                        <img src="{{url_for('static', filename='images/TrabalhadorIcon.png')}}" alt="Profissionais">
-                        <p class="Item1">Profissionais experientes</p>
-                    </div>
-
-                    <div class="CardBeneficio">
-                        <img src="{{url_for('static', filename='images/CasaIcon.png')}}" alt="Atendimento">
-                        <p class="Item2">Atendimento à <br>domicílio</p>
-                    </div>
-
-                    <div class="CardBeneficio">
-                        <img src="{{url_for('static', filename='images/GarantiaIcon.png')}}" alt="Garantia">
-                        <p class="Item3">Serviços com garantia</p>
-                    </div>
+    <header id="inicio">
+        <img src="{{url_for('static', filename='images/logo.png')}}" alt="Logo gmm" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#sobreNos">Sobre Nós</a></li>
+                <li><a href="#servicos">Nossos Serviços</a></li>
+                <li><a href="#contatos">Contatos</a></li>
+                <li><a href="https://www.google.com/search?q=gmm+refrigera%C3%A7%C3%A3o&rlz=1C1VDKB_enBR1145BR1145&oq=&gs_lcrp=EgZjaHJvbWUqBggBEEUYOzIHCAAQABiPAjIGCAEQRRg7Mg8IAhAuGAoYxwEY0QMYgAQyBggDECMYJzIMCAQQABgUGIcCGIAEMgYIBRBFGDwyBggGEEUYPTIGCAcQRRg80gEIMTM3OWowajSoAgCwAgE&sourceid=chrome&ie=UTF-8#lrd=0x94deb1f0e01fad9b:0x1e084191ed37dc60,1">Feedbacks</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="sobreNos" class="sobreNos">
+            <div class="conteudo">
+                <h2>Sobre Nós</h2>
+                <div class="card cardSub">Serviço de confiança e qualidade? é com a GMM!</div>
+                <div class="card cardSobre">
+                    <ul class="lista">
+                        <li>Profissionais experientes</li>
+                        <li>Trabalhamos com toda a linha branca de eletrodomésticos</li>
+                        <li>Atendimento à domicílio</li>
+                        <li>Serviços com garantia</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-
-        <div class="Servicos">
-            <div id="Servicos" class="InvServicos">⠀</div>
-            <h1>Nossos Serviços</h1>
-            <div class="ContainerServicos">
-                <div class="Contem3">
-                    <p>
-                        Em Joinville e região, a GMM Refrigeração é referência em serviços para toda a linha branca de eletrodomésticos. Atuando com responsabilidade, atendimento ágil e excelência na execução dos serviços, a empresa garante soluções eficientes e duradouras, sempre prezando pela confiança e pelo compromisso com cada cliente.
-                    </p>
-                </div>
-                <div class="Fotos1">
+        </section>  
+        <section id="servicos" class="servicos">
+            <div class="conteudo">
+                <h2>Nossos Serviços</h2>
+                <div class="card">Em Joinville e região, a GMM Refrigeração é referência em serviços para toda a linha branca de eletrodomésticos. Atuando com responsabilidade, atendimento ágil e excelência na execução dos serviços, a empresa garante soluções eficientes e duradouras, sempre prezando pela confiança e pelo compromisso com cada cliente.</div>
+                <div class="fotos">
                     <ul>
                         <li>
                             <img src="{{url_for('static', filename='images/1.jpeg')}}" alt="foto1">
-                            <img src="{{url_for('static', filename='images/2.jpeg')}}" alt="foto2"><br>
+                            <img src="{{url_for('static', filename='images/2.jpeg')}}" alt="foto2">
                             <img src="{{url_for('static', filename='images/3.jpeg')}}" alt="foto3">
                             <img src="{{url_for('static', filename='images/4.jpeg')}}" alt="foto4">
                         </li>
                     </ul>
                 </div>
             </div>
-        </div>
-
-        <div class="Contatos">
-            <div id="Contatos" class="InvContatos">⠀</div>
-            <h1>Contatos</h1>
-            <div class="ContainerPai">
-                <div class="Ctt2">
-                    <h2>E-mail</h2>
+        </section>
+        <section id="contatos" class="contatos">
+            <div class="conteudo">
+                <h2>Contatos</h2>
+                <div class="card">
+                    <h3>E-mail</h3>
                     <p>gmmrefrigeracaosc@gmail.com</p>
                     <img class="EmailIcon" src="{{url_for('static', filename='images/EmailIcon.png')}}" alt="Email">
                 </div>
-                <div class="Ctt1">
-                        <h2>Telefone</h2>
+                <div class="card">
+                    <h3>Telefone</h3>
                         <p>Segunda - Sábado</p>
                         <p>(47) 8818-2676</p>
                         <img class="PhoneIcon" src="{{url_for('static', filename='images/PhoneIcon.png')}}" alt="Phone">
                 </div>
-                <div class="Ctt3">
-                    <h2>Localização</h2>
+                <div class="card">
+                    <h3>Localização</h3>
                     <p>Joinville – Santa Catarina</p>
                     <img class="EmailIcon" src="{{url_for('static', filename='images/LocationIcon.png')}}" alt="Location">
                 </div>
             </div>
-        </div>
-
-    </div>
-    <div><a href="https://wa.me/47988182676" class="BtnWpp"><img src="{{url_for('static', filename='images/WhatsIcon.png')}}" alt="Whatsapp"></a></div>
+        </section>
+    </main>
+    <a href="#inicio" class="btn L">⬆</a>
+    <a href="https://wa.me/47988182676" class="btn R"><img src="{{url_for('static', filename='images/WhatsIcon.png')}}" alt="Whatsapp"></a>
     <footer>
-        <p class="Texto">Todo serviço possui garantia</p>
-        <p class="SubTexto">Desenvolvido por Arthur Iantas Stelzner, Design por Guilherme Miranda de Melo Costa</p>
+        <h3>Todo serviço possui garantia</h3>
+        <p class="SubTexto">Desenvolvido por <a href="https://github.com/ThurStelzner">Arthur Iantas Stelzner</a>, Design por Guilherme Miranda de Melo Costa</p>
     </footer>
-<script>
-    const neve = document.querySelector(".neve");
-
-    for (let i = 0; i < 30; i++) {
-        let floco = document.createElement("div");
-        floco.classList.add("floco");
-
-        floco.style.left = Math.random() * 100 + "vw";
-        floco.style.animationDuration = (5 + Math.random() * 10) + "s";
-        floco.style.opacity = Math.random();
-
-        neve.appendChild(floco);
-    }
-</script>
 </body>
 </html>
