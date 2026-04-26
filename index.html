@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
-    <link rel="shortcut icon" href="{{url_for('static', filename='images/FlocoIcon.png')}}" type="image/x-icon">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="shortcut icon" href="../static/images/FlocoIcon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
 </head>
 <body>
     <header id="inicio">
-        <img src="{{url_for('static', filename='images/logo.png')}}" alt="Logo gmm" class="logo">
+        <img src="../static/images/logo.png" alt="Logo gmm" class="logo">
         <nav>
             <ul>
                 <li><a href="#sobreNos">Sobre Nós</a></li>
@@ -44,10 +44,10 @@
                 <div class="fotos">
                     <ul>
                         <li>
-                            <img src="{{url_for('static', filename='images/1.jpeg')}}" alt="foto1">
-                            <img src="{{url_for('static', filename='images/2.jpeg')}}" alt="foto2">
-                            <img src="{{url_for('static', filename='images/3.jpeg')}}" alt="foto3">
-                            <img src="{{url_for('static', filename='images/4.jpeg')}}" alt="foto4">
+                            <img src="../static/images/1.jpeg" alt="foto1">
+                            <img src="../static/images/2.jpeg" alt="foto2">
+                            <img src="../static/images/3.jpeg" alt="foto3">
+                            <img src="../static/images/4.jpeg" alt="foto4">
                         </li>
                     </ul>
                 </div>
@@ -59,27 +59,31 @@
                 <div class="card">
                     <h3>E-mail</h3>
                     <p>gmmrefrigeracaosc@gmail.com</p>
-                    <img class="EmailIcon" src="{{url_for('static', filename='images/EmailIcon.png')}}" alt="Email">
+                    <img class="EmailIcon" src="../static/images/EmailIcon.png" alt="Email">
                 </div>
                 <div class="card">
                     <h3>Telefone</h3>
                         <p>Segunda - Sábado</p>
                         <p>(47) 8818-2676</p>
-                        <img class="PhoneIcon" src="{{url_for('static', filename='images/PhoneIcon.png')}}" alt="Phone">
+                        <img class="PhoneIcon" src="../static/images/PhoneIcon.png" alt="Phone">
                 </div>
                 <div class="card">
                     <h3>Localização</h3>
                     <p>Joinville – Santa Catarina</p>
-                    <img class="EmailIcon" src="{{url_for('static', filename='images/LocationIcon.png')}}" alt="Location">
+                    <img class="EmailIcon" src="../static/images/EmailIcon.png" alt="Location">
                 </div>
             </div>
         </section>
     </main>
-    <a href="#inicio" class="btn L">⬆</a>
-    <a href="https://wa.me/47988182676" class="btn R"><img src="{{url_for('static', filename='images/WhatsIcon.png')}}" alt="Whatsapp"></a>
+    <a href="#inicio" class="btn L">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+            <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+        </svg>
+    </a>
+    <a href="https://wa.me/47988182676" class="btn R"><img src="../static/images/WhatsIcon.png" alt="Whatsapp"></a>
     <footer>
         <h3>Todo serviço possui garantia</h3>
-        <p class="SubTexto">Desenvolvido por <a href="https://github.com/ThurStelzner">Arthur Iantas Stelzner</a>, Design por Guilherme Miranda de Melo Costa</p>
+        <p class="SubTexto">Desenvolvido por <a href="https://github.com/ThurStelzner">Arthur Iantas Stelzner</a>, Design por <a href="https://www.99freelas.com.br/user/guixdzk">Guilherme Miranda de Melo Costa</a></p>
     </footer>
 </body>
 </html>

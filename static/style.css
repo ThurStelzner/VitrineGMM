@@ -35,7 +35,7 @@ body {
     background-size: contain;
     background-position: top;
     min-height: 100vh;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family: "Nunito", sans-serif;
 }
 
@@ -55,6 +55,7 @@ ul {
 header a {
     color: var(--white);
     transition: all 0.5s ease;
+    font-size: 1rem;
 }
 
 footer {
@@ -67,6 +68,7 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 10px;
+    margin-top: 20px;
 }
 
 footer p {
@@ -91,10 +93,18 @@ h2 {
 .sobreNos, .contatos {
     height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .servicos {
     height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .contatos {
@@ -223,6 +233,8 @@ h2 {
 
     .lista {
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: row;
     }
 }
